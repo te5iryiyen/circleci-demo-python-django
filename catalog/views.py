@@ -19,6 +19,13 @@ def index(request):
     num_visits=request.session.get('num_visits', 0)
     request.session['num_visits'] = num_visits+1
     
+    a = "django test code smell test"
+    b = "django test code smell test"
+    c = "django test code smell test"
+    d = "django test code smell test"
+    if a == "django test code smell test":
+        c = a / "django test code smell test"
+    
     # Render the HTML template index.html with the data in the context variable.
     return render(
         request,
